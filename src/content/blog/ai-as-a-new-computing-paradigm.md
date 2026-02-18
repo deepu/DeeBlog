@@ -1,7 +1,7 @@
 ---
 title: "AI as a New Computing Paradigm"
 description: "Every computing shift follows the same pattern: a new primitive appears, an OS layer forms, applications emerge. AI is doing it again — and humans are moving up, not out."
-pubDate: 2026-02-18
+pubDate: 2026-02-19
 tags: ["ai", "llms", "computing", "opinion"]
 draft: false
 ---
