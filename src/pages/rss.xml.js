@@ -6,7 +6,7 @@ export async function GET(context) {
   
   return rss({
     title: 'DeeBlog',
-    description: 'Tech insights, experiments, and learnings. Direct, no-bs, just useful stuff.',
+    description: 'Building with LLMs, shipping products, thinking out loud.',
     site: context.site,
     items: posts
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
