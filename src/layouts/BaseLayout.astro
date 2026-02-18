@@ -7,7 +7,7 @@ interface Props {
   image?: string;
 }
 
-const { title, description = "DeeBlog - Tech insights and experiments", image = "/og-image.png" } = Astro.props;
+const { title, description = "Deepu's Blog - Tech insights and experiments", image = "/og-image.png" } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -20,8 +20,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Primary Meta Tags -->
-    <title>{title} | DeeBlog</title>
-    <meta name="title" content={`${title} | DeeBlog`} />
+    <title>{title} | Deepu's Blog</title>
+    <meta name="title" content={`${title} | Deepu's Blog`} />
     <meta name="description" content={description} />
     
     <!-- Open Graph / Facebook -->
@@ -39,14 +39,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:image" content={new URL(image, Astro.site)} />
     
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="DeeBlog RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Deepu's Blog RSS" href="/rss.xml" />
     
   </head>
   <body class="bg-[#fdfdfd] text-[#282728] min-h-screen">
     <header class="border-b border-[#e5e5e5]">
       <nav class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" class="text-xl font-semibold text-[#282728] hover:text-accent transition-colors">
-          DeeBlog
+          Deepu's Blog
         </a>
         <div class="flex gap-6">
           <a href="/posts" class="text-[#666] hover:text-[#282728] transition-colors">Posts</a>
@@ -67,7 +67,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <a href="/rss.xml" class="hover:text-[#282728] transition-colors">RSS</a>
         </div>
         <p class="text-sm">
-          © {new Date().getFullYear()} DeeBlog.
+          © {new Date().getFullYear()} Deepu's Blog.
 CC BY 4.0 · Code MIT
         </p>
       </div>

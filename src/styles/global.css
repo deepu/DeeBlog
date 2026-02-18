@@ -12,7 +12,7 @@ html {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
