@@ -1,7 +1,7 @@
 ---
 title: "Rise of the Product Engineer"
 description: "AI coding agents didn't kill engineering. They killed the distance between product thinking and building."
-pubDate: 2025-02-18
+pubDate: 2026-02-18
 tags: ["ai", "engineering", "product", "opinion"]
 draft: false
 ---
