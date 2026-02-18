@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = "DeeBlog - Tech insights and experiments", image = "/og-image.png" } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title} | DeeBlog</title>
+    <meta name="title" content={`${title} | DeeBlog`} />
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="DeeBlog RSS" href="/rss.xml" />
+    
+  </head>
+  <body class="bg-[#fdfdfd] text-[#282728] min-h-screen">
+    <header class="border-b border-[#e5e5e5]">
+      <nav class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-semibold text-[#282728] hover:text-accent transition-colors">
+          DeeBlog
+        </a>
+        <div class="flex gap-6">
+          <a href="/posts" class="text-[#666] hover:text-[#282728] transition-colors">Posts</a>
+          <a href="/about" class="text-[#666] hover:text-[#282728] transition-colors">About</a>
+          <a href="/search" class="text-[#666] hover:text-[#282728] transition-colors">Search</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="max-w-4xl mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="border-t border-[#e5e5e5] mt-16">
+      <div class="max-w-4xl mx-auto px-4 py-8 text-center text-[#666]">
+        <div class="flex justify-center gap-4 mb-4">
+          <a href="https://x.com/deepu" class="hover:text-[#282728] transition-colors">X</a>
+          <a href="/rss.xml" class="hover:text-[#282728] transition-colors">RSS</a>
+        </div>
+        <p class="text-sm">
+          © {new Date().getFullYear()} DeeBlog.
+CC BY 4.0 · Code MIT
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
