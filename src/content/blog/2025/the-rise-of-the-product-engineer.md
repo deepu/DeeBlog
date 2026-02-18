@@ -3,7 +3,7 @@ title: "Rise of the Product Engineer"
 description: "AI coding agents didn't kill engineering. They killed the distance between product thinking and building."
 pubDate: 2025-02-18
 tags: ["ai", "engineering", "product", "opinion"]
-draft: true
+draft: false
 ---
 
 I'm not an engineer. I'm a product person who was always upstream of the code. Then coding agents happened — and I didn't stop coding, I **started**. Not writing code directly, but working *through* it. Shaping architecture, iterating on UI, every day.
