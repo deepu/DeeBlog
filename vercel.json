@@ -2,5 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "astro",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/posts/2025/the-rise-of-the-product-engineer",
+      "destination": "/posts/the-rise-of-the-product-engineer",
+      "permanent": true
+    }
+  ]
 }
